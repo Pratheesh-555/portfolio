@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal page of PK">
+    <title>Pratheesh Profile</title>
+    <link rel="icon" href="icon.ico" >
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="portfolio.js"></script>
+    <center>
+    <header>
+        <h4 class="resume"><a href="">Download my resume</a></h4>
+        <h1>Welcome Homie!</h1>
+        <p>This is PK,a<p id="display"></p> </p>
+    </header>
+    
+    <section>
+        <a href="https://sites.google.com/view/krish-in/home"><img class="mypic" src="pkimg.JPG" alt="pk image" height="200px" width="200px"> </a>
+    </section> 
+    
+    <hr>
+
+    <section class="connect">
+        <h1>Contact Info</h1>
+        <p>Lets connect</p>
+        <h4> <a href="mailto:127003195@sastra.ac.in"><img src="mailicon.webp" style="height: 50px; width: 50px;"></a> <a href="https://www.linkedin.com/in/pratheesh-krishnan-30b08a282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><img src="inicon.webp" style="height: 50px; width: 50px;"></a> </h4>
+    </section> 
+    
+    <hr>
+
+    <section class="skills">
+        <h1>
+            My skills
+        </h1>
+        <table>
+            <tr>
+                <td>
+                    <ul style="text-align: center;">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Database</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    <div class="skillflow">
+        <img src="c_pk.png" alt="c">
+        <img src="cpp_pk.png" alt="cpp">
+        <img src="python_pk.png" alt="python">
+        <img src="html_pk.png" alt="html">
+        <img src="css_pk.png" alt="css">
+        <img src="webdev_pk.png" alt="webdevelopment">
+    </div>
+
+    <hr>
+
+    <section class="project">
+        <h1>Projects</h1>
+        <p style="cursor: pointer;">Take a look at my portfolio</p>
+    </section>
+ 
+    <section class="contact">
+        <h2>Contact me</h2>
+        <form>
+            <label  class="c" for="name">Name:</label> <br>
+            <input type="text" id="name" name="name"> <br> <br>
+            <label class="c"  for="email">Email:</label> <br>
+            <input type="email" id="email" name="email"> <br> <br>
+            <label class="c"  type="text">Message:</label> <br>
+            <input  style="height: fit-content; width: fit-content;" type="text" id="message" name="message"> <br> <br>
+            <button type="submit">Send</button> <br>
+        </form>
+    </section>
+    <center>
+    
+    <footer>
+        <p>&copy; 2024 | All rights reserved PK | Terms and policy</p>
+    </footer>
+
+    <div id="toggle" class="toggle">
+        <i class="fas fa moon"></i>
+    </div>
+</body>
+</html>
