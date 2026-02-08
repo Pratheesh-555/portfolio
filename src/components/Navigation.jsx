@@ -116,7 +116,7 @@ const Navigation = () => {
     <>
       {/* Mobile Bottom Navigation (visible on mobile only) */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden safe-area-bottom">
-        <div className="backdrop-blur-xl bg-black/90 border-t border-white/20 px-1 py-2 shadow-2xl">
+        <div className="backdrop-blur-xl bg-black/95 border-t border-white/20 px-2 py-3 shadow-2xl">
           <div className="flex items-center justify-around max-w-md mx-auto">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -126,24 +126,24 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative flex flex-col items-center gap-1 px-2 py-1.5 rounded-lg transition-all min-w-[56px] ${
+                  className={`relative flex flex-col items-center gap-1.5 px-3 py-2 rounded-xl transition-all min-w-[60px] min-h-[60px] ${
                     isActive ? 'scale-105' : 'active:scale-95'
                   }`}
                 >
                   {/* Active background */}
                   {isActive && (
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/30 to-purple-500/30 animate-pulse" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-500/30 via-cyan-500/30 to-purple-500/30 animate-pulse" />
                   )}
 
                   {/* Icon */}
                   <Icon 
-                    className={`relative z-10 text-xl transition-colors ${
-                      isActive ? 'text-blue-400' : 'text-gray-400'
+                    className={`relative z-10 text-2xl transition-colors ${
+                      isActive ? 'text-emerald-400' : 'text-gray-400'
                     }`} 
                   />
                   
                   {/* Label */}
-                  <span className={`relative z-10 text-[9px] font-medium transition-colors leading-tight ${
+                  <span className={`relative z-10 text-[10px] font-medium transition-colors leading-tight ${
                     isActive ? 'text-white font-semibold' : 'text-gray-500'
                   }`}>
                     {item.label}
@@ -201,7 +201,7 @@ const Navigation = () => {
 
       {/* Scroll Progress Bar */}
       <div
-        className="fixed top-0 left-0 right-0 h-1 md:h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 origin-left z-[60]"
+        className="fixed top-0 left-0 right-0 h-1 md:h-0.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 origin-left z-[60]"
         style={{ 
           transform: `scaleX(${scrollProgress.get()})`,
           transformOrigin: 'left'

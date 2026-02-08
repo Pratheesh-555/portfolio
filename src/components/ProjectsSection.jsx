@@ -25,7 +25,7 @@ const ProjectsSection = ({ projects }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm font-medium backdrop-blur-sm">
+            <span className="px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm">
               💻 My Work
             </span>
           </motion.div>
@@ -39,7 +39,7 @@ const ProjectsSection = ({ projects }) => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Featured{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400">
               Projects
             </span>
           </motion.h2>
@@ -57,7 +57,7 @@ const ProjectsSection = ({ projects }) => {
 
           {/* Decorative line */}
           <motion.div
-            className="mt-8 mx-auto w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"
+            className="mt-8 mx-auto w-32 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-full"
             initial={{ width: 0 }}
             whileInView={{ width: 128 }}
             viewport={{ once: true }}
@@ -93,13 +93,13 @@ const ProjectsSection = ({ projects }) => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.button
-              className="group relative px-8 py-4 rounded-full font-semibold text-white overflow-hidden border-2 border-blue-500 hover:border-purple-500 transition-colors"
+              className="group relative px-8 py-4 rounded-full font-semibold text-white overflow-hidden border-2 border-emerald-500 hover:border-cyan-500 transition-all hover:shadow-lg hover:shadow-emerald-500/50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">View All Projects</span>
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"
+                className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
@@ -124,7 +124,7 @@ const ProjectsSection = ({ projects }) => {
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -136,7 +136,7 @@ const ProjectsSection = ({ projects }) => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],
