@@ -19,7 +19,7 @@ const HeroSection = ({ personalInfo }) => {
             <motion.div
               className="inline-block"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 text-lg sm:text-xl md:text-2xl font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 text-base sm:text-lg md:text-xl font-medium">
                 👋 Hello, I'm
               </span>
             </motion.div>
@@ -57,15 +57,15 @@ const HeroSection = ({ personalInfo }) => {
 
             {/* CTA Buttons - reduced animations */}
             <div
-              className="flex flex-col xs:flex-row flex-wrap gap-4 pt-4"
+              className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
               {/* Contact Button */}
               <a
                 href={`mailto:${personalInfo?.email}`}
-                className="group relative px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-semibold text-white overflow-hidden text-center transition-all hover:shadow-lg hover:shadow-emerald-500/50 active:scale-95"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-semibold text-white overflow-hidden text-center transition-all hover:shadow-lg hover:shadow-emerald-500/50 active:scale-95"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  <FaEnvelope className="text-lg" /> Get In Touch
+                  <FaEnvelope className="text-base sm:text-lg" /> Get In Touch
                 </span>
               </a>
 
@@ -73,26 +73,26 @@ const HeroSection = ({ personalInfo }) => {
               <a
                 href={personalInfo?.resumeFile}
                 download
-                className="group px-8 py-4 border-2 border-emerald-500 rounded-full font-semibold text-white hover:bg-emerald-500/20 transition-all backdrop-blur-sm text-center active:scale-95"
+                className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-emerald-500 rounded-full font-semibold text-white hover:bg-emerald-500/20 transition-all backdrop-blur-sm text-center active:scale-95"
               >
                 <span className="flex items-center justify-center gap-2">
-                  <FaFileDownload className="text-lg" /> Resume
+                  <FaFileDownload className="text-base sm:text-lg" /> Resume
                 </span>
               </a>
             </div>
 
             {/* Social Links - simpler animations */}
             <div
-              className="flex gap-4 pt-4"
+              className="flex gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
               {personalInfo?.github && (
                 <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-emerald-400 hover:bg-white/10 hover:border-emerald-500/50 transition-all"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-emerald-400 hover:bg-white/10 hover:border-emerald-500/50 transition-all"
                 >
-                  <FaGithub size={20} />
+                  <FaGithub size={18} className="sm:w-5 sm:h-5" />
                 </a>
               )}
               {personalInfo?.linkedin && (
@@ -100,9 +100,9 @@ const HeroSection = ({ personalInfo }) => {
                   href={personalInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-cyan-400 hover:bg-white/10 hover:border-cyan-500/50 transition-all"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-cyan-400 hover:bg-white/10 hover:border-cyan-500/50 transition-all"
                 >
-                  <FaLinkedin size={20} />
+                  <FaLinkedin size={18} className="sm:w-5 sm:h-5" />
                 </a>
               )}
               {personalInfo?.leetcode && (
@@ -110,9 +110,9 @@ const HeroSection = ({ personalInfo }) => {
                   href={personalInfo.leetcode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-purple-400 hover:bg-white/10 hover:border-purple-500/50 transition-all"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-purple-400 hover:bg-white/10 hover:border-purple-500/50 transition-all"
                 >
-                  <FaCode size={20} />
+                  <FaCode size={18} className="sm:w-5 sm:h-5" />
                 </a>
               )}
             </div>

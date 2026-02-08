@@ -88,7 +88,7 @@ const SkillsSection = ({ skills }) => {
             <motion.button
               key={index}
               onClick={() => setSelectedCategory(index)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all ${
                 selectedCategory === index
                   ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/50'
                   : 'bg-white/5 backdrop-blur-sm border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-emerald-500/30'
