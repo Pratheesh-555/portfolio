@@ -19,7 +19,7 @@ const HeroSection = ({ personalInfo }) => {
             <motion.div
               className="inline-block"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-base sm:text-lg md:text-xl font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 text-lg sm:text-xl md:text-2xl font-medium">
                 👋 Hello, I'm
               </span>
             </motion.div>
@@ -34,7 +34,7 @@ const HeroSection = ({ personalInfo }) => {
 
               {/* Static underline */}
               <div
-                className="h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"
+                className="h-1 w-full bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-full"
               />
             </div>
 
@@ -42,7 +42,7 @@ const HeroSection = ({ personalInfo }) => {
             <p
               className="text-xl md:text-2xl text-gray-300"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-semibold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 font-semibold">
                 {personalInfo?.title}
               </span>
             </p>
@@ -57,15 +57,15 @@ const HeroSection = ({ personalInfo }) => {
 
             {/* CTA Buttons - reduced animations */}
             <div
-              className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
+              className="flex flex-col xs:flex-row flex-wrap gap-4 pt-4"
             >
               {/* Contact Button */}
               <a
                 href={`mailto:${personalInfo?.email}`}
-                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold text-white overflow-hidden text-center text-sm sm:text-base transition-transform active:scale-95"
+                className="group relative px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-semibold text-white overflow-hidden text-center transition-all hover:shadow-lg hover:shadow-emerald-500/50 active:scale-95"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  <FaEnvelope /> Get In Touch
+                  <FaEnvelope className="text-lg" /> Get In Touch
                 </span>
               </a>
 
@@ -73,26 +73,26 @@ const HeroSection = ({ personalInfo }) => {
               <a
                 href={personalInfo?.resumeFile}
                 download
-                className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-500 rounded-full font-semibold text-white hover:bg-blue-500/10 transition-all backdrop-blur-sm text-center text-sm sm:text-base active:scale-95"
+                className="group px-8 py-4 border-2 border-emerald-500 rounded-full font-semibold text-white hover:bg-emerald-500/20 transition-all backdrop-blur-sm text-center active:scale-95"
               >
                 <span className="flex items-center justify-center gap-2">
-                  <FaFileDownload /> Resume
+                  <FaFileDownload className="text-lg" /> Resume
                 </span>
               </a>
             </div>
 
             {/* Social Links - simpler animations */}
             <div
-              className="flex gap-3 sm:gap-4 pt-2 sm:pt-4"
+              className="flex gap-4 pt-4"
             >
               {personalInfo?.github && (
                 <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-blue-400 hover:bg-white/10 transition-colors"
+                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-emerald-400 hover:bg-white/10 hover:border-emerald-500/50 transition-all"
                 >
-                  <FaGithub size={18} className="sm:w-5 sm:h-5" />
+                  <FaGithub size={20} />
                 </a>
               )}
               {personalInfo?.linkedin && (
@@ -100,9 +100,9 @@ const HeroSection = ({ personalInfo }) => {
                   href={personalInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-blue-400 hover:bg-white/10 transition-colors"
+                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-cyan-400 hover:bg-white/10 hover:border-cyan-500/50 transition-all"
                 >
-                  <FaLinkedin size={18} className="sm:w-5 sm:h-5" />
+                  <FaLinkedin size={20} />
                 </a>
               )}
               {personalInfo?.leetcode && (
@@ -110,9 +110,9 @@ const HeroSection = ({ personalInfo }) => {
                   href={personalInfo.leetcode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-amber-400 hover:bg-white/10 transition-colors"
+                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:text-purple-400 hover:bg-white/10 hover:border-purple-500/50 transition-all"
                 >
-                  <FaCode size={18} className="sm:w-5 sm:h-5" />
+                  <FaCode size={20} />
                 </a>
               )}
             </div>
@@ -125,20 +125,20 @@ const HeroSection = ({ personalInfo }) => {
             <div className="relative w-full max-w-md">
               {/* Glassmorphism Card */}
               <div
-                className="relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/20 p-6 sm:p-8 shadow-2xl transition-all hover:border-white/30"
+                className="relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/20 p-8 shadow-2xl transition-all hover:border-emerald-500/30 hover:shadow-emerald-500/20"
               >
                 {/* Simple gradient accent */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-purple-500/10 opacity-50" />
 
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Profile Image */}
                   <div
-                    className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-4 sm:mb-6"
+                    className="relative w-48 h-48 mx-auto mb-6"
                   >
                     {/* Static ring - no animation */}
                     <div
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-75"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 opacity-75"
                     />
                     
                     {/* Image container */}
@@ -152,7 +152,7 @@ const HeroSection = ({ personalInfo }) => {
                   </div>
 
                   {/* Stats - no animations */}
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6 sm:mt-8">
+                  <div className="grid grid-cols-3 gap-4 mt-8">
                     {[
                       { label: 'Projects', value: '3+' },
                       { label: 'Experience', value: '1yr+' },
@@ -160,12 +160,12 @@ const HeroSection = ({ personalInfo }) => {
                     ].map((stat, index) => (
                       <div
                         key={index}
-                        className="text-center p-2 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors"
+                        className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 transition-all"
                       >
-                        <div className="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                           {stat.value}
                         </div>
-                        <div className="text-[10px] sm:text-xs text-gray-400 mt-1">{stat.label}</div>
+                        <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
                       </div>
                     ))}
                   </div>

@@ -61,7 +61,7 @@ const SkillsSection = ({ skills }) => {
             transition={{ duration: 0.6 }}
           >
             Skills &{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400">
               Technologies
             </span>
           </motion.h2>
@@ -88,10 +88,10 @@ const SkillsSection = ({ skills }) => {
             <motion.button
               key={index}
               onClick={() => setSelectedCategory(index)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 selectedCategory === index
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/50'
-                  : 'bg-white/5 backdrop-blur-sm border border-white/10 text-gray-400 hover:text-white hover:bg-white/10'
+                  ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/50'
+                  : 'bg-white/5 backdrop-blur-sm border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-emerald-500/30'
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -124,7 +124,7 @@ const SkillsSection = ({ skills }) => {
                   className="group relative"
                 >
                   <div 
-                    className="relative px-5 py-3 rounded-full backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg flex items-center gap-3 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:bg-white/10"
+                    className="relative px-5 py-3 rounded-full backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg flex items-center gap-3 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:bg-white/10 hover:border-emerald-500/40"
                     style={{
                       boxShadow: `0 0 20px ${colors.glow}10`,
                     }}
@@ -185,7 +185,7 @@ const SkillsSection = ({ skills }) => {
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -197,7 +197,7 @@ const SkillsSection = ({ skills }) => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],

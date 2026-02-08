@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index, onClick }) => {
       className="group relative h-full"
     >
       <motion.div
-        className="relative h-full rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl hover:border-blue-500/30 transition-colors"
+        className="relative h-full rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl hover:border-emerald-500/40 hover:shadow-emerald-500/20 transition-all"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
@@ -39,7 +39,7 @@ const ProjectCard = ({ project, index, onClick }) => {
               {project.tech.split('·').slice(0, 3).map((tech, i) => (
                 <motion.span
                   key={i}
-                  className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm border border-white/20 text-xs text-white hover:border-blue-400/50 transition-colors"
+                  className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm border border-white/20 text-xs text-white hover:border-emerald-400/50 transition-colors"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + i * 0.1 }}
@@ -62,7 +62,7 @@ const ProjectCard = ({ project, index, onClick }) => {
 
             {/* Hover overlay */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"
+              className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20"
               initial={{ opacity: 0 }}
               animate={{ opacity: isHovered ? 1 : 0 }}
               transition={{ duration: 0.3 }}
@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index, onClick }) => {
           {/* Content Section */}
           <div className="flex-1 p-6 flex flex-col">
             {/* Title */}
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all">
               {project.title}
             </h3>
 
@@ -93,14 +93,14 @@ const ProjectCard = ({ project, index, onClick }) => {
                   onClick(project);
                 }
               }}
-              className="group/btn relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold overflow-hidden hover:shadow-lg transition-shadow"
+              className="group/btn relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold overflow-hidden hover:shadow-lg hover:shadow-emerald-500/50 transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               {/* Button background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full" />
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"
                 initial={{ x: '100%' }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}

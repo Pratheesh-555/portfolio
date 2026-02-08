@@ -44,7 +44,7 @@ const ContactSection = ({ personalInfo }) => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Let's{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400">
               Work Together
             </span>
           </motion.h2>
@@ -62,7 +62,7 @@ const ContactSection = ({ personalInfo }) => {
 
           {/* Decorative line */}
           <motion.div
-            className="mt-8 mx-auto w-32 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full"
+            className="mt-8 mx-auto w-32 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-full"
             initial={{ width: 0 }}
             whileInView={{ width: 128 }}
             viewport={{ once: true }}
@@ -83,16 +83,16 @@ const ContactSection = ({ personalInfo }) => {
             {/* Email */}
             <motion.a
               href={`mailto:${personalInfo?.email}`}
-              className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+              className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 transition-all"
               whileHover={{ scale: 1.02, x: 10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-blue-500 flex items-center justify-center group-hover:rotate-12 transition-transform">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center group-hover:rotate-12 transition-transform">
                 <FaEnvelope className="text-white text-xl" />
               </div>
               <div className="flex-1">
                 <h3 className="text-sm text-gray-400 mb-1">Email Me</h3>
-                <p className="text-white font-medium group-hover:text-green-400 transition-colors">
+                <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">
                   {personalInfo?.email}
                 </p>
               </div>
@@ -104,7 +104,7 @@ const ContactSection = ({ personalInfo }) => {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple-500/30 transition-all"
                 whileHover={{ scale: 1.02, x: 10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
@@ -126,16 +126,16 @@ const ContactSection = ({ personalInfo }) => {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/30 transition-all"
                 whileHover={{ scale: 1.02, x: 10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:rotate-12 transition-transform">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center group-hover:rotate-12 transition-transform">
                   <FaLinkedin className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-sm text-gray-400 mb-1">LinkedIn</h3>
-                  <p className="text-white font-medium group-hover:text-blue-400 transition-colors">
+                  <p className="text-white font-medium group-hover:text-cyan-400 transition-colors">
                     Connect with me
                   </p>
                 </div>
@@ -148,7 +148,7 @@ const ContactSection = ({ personalInfo }) => {
                 href={personalInfo.leetcode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+                className="group flex items-center gap-4 p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all"
                 whileHover={{ scale: 1.02, x: 10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
@@ -177,7 +177,7 @@ const ContactSection = ({ personalInfo }) => {
             <motion.div
               className="absolute inset-0 rounded-2xl"
               style={{
-                background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3))',
+                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(6, 182, 212, 0.3), rgba(139, 92, 246, 0.3))',
               }}
               animate={{
                 opacity: [0.3, 0.6, 0.3],
@@ -196,7 +196,7 @@ const ContactSection = ({ personalInfo }) => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors"
                     placeholder="your@email.com"
                     required
                   />
@@ -206,7 +206,7 @@ const ContactSection = ({ personalInfo }) => {
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors resize-none"
                     placeholder="Tell me about your project..."
                     rows={4}
                     required
@@ -214,12 +214,12 @@ const ContactSection = ({ personalInfo }) => {
                 </div>
                 <motion.button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 text-white font-semibold flex items-center justify-center gap-2 group overflow-hidden relative"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 text-white font-semibold flex items-center justify-center gap-2 group overflow-hidden relative hover:shadow-lg hover:shadow-emerald-500/50"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-green-500"
+                    className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-emerald-500"
                     initial={{ x: '100%' }}
                     whileHover={{ x: 0 }}
                     transition={{ duration: 0.3 }}
@@ -255,7 +255,7 @@ const ContactSection = ({ personalInfo }) => {
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-10 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"
+          className="absolute top-1/4 left-10 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -267,7 +267,7 @@ const ContactSection = ({ personalInfo }) => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-10 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],
